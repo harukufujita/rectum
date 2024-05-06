@@ -63,3 +63,4 @@ if st.button('Calculate'):
 
     # 結果を表示
     st.write(f'Predicted leak rate: {predicted_leak_rate_rounded:.1f}%')
+    st.snow()
