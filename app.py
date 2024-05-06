@@ -18,8 +18,8 @@ bst = joblib.load(model_path)
 
 # 入力フォームでの特徴量の入力
 laparotomy = st.selectbox('History of Laparotomy', ['Yes', 'No'])
-cT_cat = st.selectbox('cT Category', ['T1/T2', 'T3', 'T4'])
 pre_Tx = st.selectbox('Preoperative therapy', ['CRT', 'CT', 'RT', 'none'])
+cT_cat = st.selectbox('cT Category', ['T1/T2', 'T3', 'T4'])
 procedure = st.selectbox('Procedure', ['LAR','ISR'])
 LPND_lateral = st.selectbox('Lateral LPND', ['無', '片側','両側'])
 age = st.slider('Age', 0, 100, 50)
