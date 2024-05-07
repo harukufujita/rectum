@@ -25,7 +25,7 @@ pre_Tx = st.selectbox('Preoperative therapy', ['None','CRT', 'CT', 'RT'])
 cT_cat = st.selectbox('cT Category', ['T1/T2', 'T3', 'T4'])
 procedure = st.selectbox('Procedure', ['LAR','ISR'])
 LPND_lateral = st.selectbox('LPND', ['None', 'Unilateral','Bilateral'])
-distance_AV_i = st.slider('Distance from AV', 0.0, 10.0, 0.0,step=0.1)
+distance_AV_i = st.slider('Distance from AV (cm)', 0.0, 10.0, 0.0,step=0.1)
 
 
 # ユーザーの入力をデータフレームに変換
