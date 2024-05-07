@@ -32,7 +32,7 @@ distance_AV_i = st.slider('Distance from AV', 0.0, 10.0, 0.0,step=0.1)
 input_data = pd.DataFrame({
     'laparotomy': [1 if laparotomy == 'Yes' else 0],
     'cT_cat': {'T1/T2': 0, 'T3': 1, 'T4': 2}[cT_cat],
-    'pre_Tx': {'CRT': 0, 'CT': 1, 'RT': 2, 'none': 3}[pre_Tx],
+    'pre_Tx': {'CRT': 0, 'CT': 1, 'RT': 2, 'None': 3}[pre_Tx],
     'procedure': {'APR': 0, 'Hartmann': 1, 'ISR': 2, 'LAR': 3, 'TPE': 4}[procedure],
     'LPND_lateral': {'両側': 0, '無': 1, '片側': 2}[LPND_lateral],
     'age': [age],
