@@ -7,6 +7,7 @@ import pickle
 
 # 入力フォームを作成
 st.title('Leak Rate Prediction')
+st.write('デモなので臨床使用はできません')
 
 import joblib
 import os
@@ -17,13 +18,13 @@ bst = joblib.load(model_path)
 
 
 # 入力フォームでの特徴量の入力
+age = st.slider('Age', 0, 100, 50)
+bmi = st.slider('BMI', 0.0, 50.0, 25.0, step=0.1)
 laparotomy = st.selectbox('History of Laparotomy', ['Yes', 'No'])
 pre_Tx = st.selectbox('Preoperative therapy', ['CRT', 'CT', 'RT', 'none'])
 cT_cat = st.selectbox('cT Category', ['T1/T2', 'T3', 'T4'])
 procedure = st.selectbox('Procedure', ['LAR','ISR'])
 LPND_lateral = st.selectbox('Lateral LPND', ['無', '片側','両側'])
-age = st.slider('Age', 0, 100, 50)
-bmi = st.slider('BMI', 0.0, 50.0, 25.0, step=0.1)
 distance_AV_i = st.slider('Distance from AV', 0.0, 10.0, 0.0,step=0.1)
 
 
